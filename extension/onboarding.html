@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Friend — Setup</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #080808;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      max-width: 520px;
+      width: 90%;
+      padding: 60px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+    .logo {
+      font-size: 72px;
+      margin-bottom: 24px;
+      animation: bounce 0.7s cubic-bezier(0.34,1.56,0.64,1) both;
+    }
+    @keyframes bounce {
+      0% { transform: scale(0.4); opacity: 0; }
+      60% { transform: scale(1.15); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      letter-spacing: -0.3px;
+    }
+    .tagline {
+      font-size: 15px;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 52px;
+      text-align: center;
+      line-height: 1.6;
+    }
+    .steps {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .step {
+      display: flex;
+      gap: 20px;
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadein 0.4s ease forwards;
+    }
+    .step:last-child { border-bottom: none; }
+    .step:nth-child(1) { animation-delay: 0.2s; }
+    .step:nth-child(2) { animation-delay: 0.35s; }
+    .step:nth-child(3) { animation-delay: 0.5s; }
+    @keyframes fadein {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .step-content h3 {
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+    .step-content p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.6;
+    }
+    .step-content code {
+      background: rgba(255,255,255,0.08);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.7);
+    }
+    .btn {
+      margin-top: 48px;
+      width: 100%;
+      padding: 14px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+      letter-spacing: 0.3px;
+    }
+    .btn:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.2);
+    }
+    .footer {
+      margin-top: 32px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.18);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">🙂</div>
+    <h1>Hello Friend</h1>
+    <p class="tagline">A friend who shows up when you need it most.<br>Let's get you set up.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>Write your message</h3>
+          <p>Click the 🙂 icon in your Chrome toolbar. Write something to your future self — something only you would say. This is the message that will appear when you need it.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>Enable in incognito</h3>
+          <p>Go to <code>chrome://extensions</code> → find Hello Friend → click Details → turn on <code>Allow in Incognito</code>. This is the most important step — your future self needs this.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>You're protected</h3>
+          <p>Hello Friend now runs silently in the background. When you need it, it will show up. No notifications, no tracking, no data collected. Just you and your message.</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn" onclick="window.close()">I'm ready</button>
+    <p class="footer">Built with respect. Free forever. No ads.</p>
+  </div>
+</body>
+</html>
